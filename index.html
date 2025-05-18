@@ -3,40 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photography Gallery</title>
+    <title>Photo Gallery</title>
+    <!-- Artistic Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Playfair+Display:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BasicLightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"
+    />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>My Photography Gallery</h1>
-
+    <h1 class="logo-title">the way <span class="highlight">i see it</span></h1>
     <div class="grid">
+      <div class="grid-sizer"></div>
+      <!-- Add your images below -->
+      <div class="grid-item"><img src="./images/art.JPG" alt="Art" /></div>
       <div class="grid-item">
-        <img src="https://picsum.photos/id/1015/400/300" />
+        <img src="./images/bird-wire.JPG" alt="Bird on Wire" />
+      </div>
+      <div class="grid-item"><img src="./images/bird.JPG" alt="Bird" /></div>
+      <div class="grid-item">
+        <img src="./images/blur-d.JPG" alt="Blurred Image" />
       </div>
       <div class="grid-item">
-        <img src="https://picsum.photos/id/1016/400/500" />
+        <img src="./images/buddha-2.JPG" alt="Buddha Statue" />
       </div>
       <div class="grid-item">
-        <img src="https://picsum.photos/id/1018/400/250" />
+        <img src="./images/buddha-3.JPG" alt="Buddha Statue" />
       </div>
       <div class="grid-item">
-        <img src="https://picsum.photos/id/1024/400/600" />
+        <img src="./images/buddha.JPG" alt="Buddha Statue" />
       </div>
       <div class="grid-item">
-        <img src="https://picsum.photos/id/1025/400/350" />
+        <img src="./images/cactus.JPG" alt="Cactus" />
+      </div>
+      <div class="grid-item"><img src="./images/cat.jpg" alt="Cat" /></div>
+      <div class="grid-item">
+        <img src="./images/cherry-blosson.JPG" alt="Cherry Blossom" />
       </div>
       <div class="grid-item">
-        <img src="https://picsum.photos/id/1027/400/450" />
+        <img src="./images/chess-piece-2.JPG" alt="Chess Piece" />
       </div>
-    </div>
-
-    <!-- Lightbox -->
-    <div id="lightbox">
-      <img id="lightbox-img" />
+      <div class="grid-item">
+        <img src="./images/chess-piece.JPG" alt="Chess Piece" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/flowers2.JPG" alt="Flowers" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/tiny.JPG" alt="Tiny Object" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/twin-birds.JPG" alt="Twin Birds" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/gangtok.JPG" alt="Gangtok" />
+      </div>
+      <div class="grid-item"><img src="./images/goat.JPG" alt="Goat" /></div>
+      <div class="grid-item">
+        <img src="./images/goddess.JPG" alt="Goddess" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/green-leaves.JPG" alt="Green Leaves" />
+      </div>
+      <div class="grid-item"><img src="./images/tanvi.JPG" alt="Tanvi" /></div>
+      <div class="grid-item">
+        <img src="./images/tiny-2.JPG" alt="Tiny Object" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/hornbill.JPG" alt="Hornbill" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/kingfisher.JPG" alt="Kingfisher" />
+      </div>
+      <div class="grid-item"><img src="./images/lake.JPG" alt="Lake" /></div>
+      <div class="grid-item">
+        <img src="./images/leaf-perspective.JPG" alt="Leaf Perspective" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/little-flowers.JPG" alt="Little Flowers" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/sunlight.JPG" alt="Sunlight" />
+      </div>
+      <div class="grid-item"><img src="./images/luffy.JPG" alt="Luffy" /></div>
+      <div class="grid-item"><img src="./images/messi.JPG" alt="Messi" /></div>
+      <div class="grid-item"><img src="./images/shiva.JPG" alt="Shiva" /></div>
+      <div class="grid-item">
+        <img src="./images/moon-shiloutte.JPG" alt="Moon Silhouette" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/orange-beak.JPG" alt="Orange Beak" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/origami-shiloutte.JPG" alt="Origami Silhouette" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/origami.JPG" alt="Origami" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/view-point.JPG" alt="View Point" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/painting.JPG" alt="Painting" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/parrot-2.JPG" alt="Parrot" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/parrot.JPG" alt="Parrot" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/stone-tower.JPG" alt="Stone Tower" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/pelling-bird.JPG" alt="Pelling Bird" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/shiva-2.JPG" alt="Shiva" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/pelling-roof.JPG" alt="Pelling Roof" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/pelling.JPG" alt="Pelling" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/red-flower.JPG" alt="Red Flower" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/snow-leopard.JPG" alt="Snow Leopard" />
+      </div>
+      <div class="grid-item"><img src="./images/roof.JPG" alt="Roof" /></div>
+      <div class="grid-item">
+        <img src="./images/river-rock.JPG" alt="River Rock" />
+      </div>
+      <div class="grid-item">
+        <img src="./images/snow-sighting.JPG" alt="Snow Sighting" />
+      </div>
+      <div class="grid-item"><img src="./images/snow.JPG" alt="Snow" /></div>
     </div>
 
     <!-- Masonry JS -->
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <!-- BasicLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
+    <footer>© 2025 Fourteen_pixels · Crafted with perspective</footer>
   </body>
 </html>

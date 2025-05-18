@@ -1,64 +1,32 @@
-// Initialize Masonry after images load
+const items = document.querySelectorAll(".grid-item");
+
+items.forEach((item) => {
+  const min = 200;
+  const max = 350;
+  const width = Math.floor(Math.random() * (max - min + 1)) + min;
+  // const height = Math.floor(Math.random() * (max - min + 1)) + min;
+
+  item.style.width = `350px`;
+  // item.style.height = `${height}px`;
+});
+
 window.addEventListener("load", function () {
   new Masonry(".grid", {
     itemSelector: ".grid-item",
-    columnWidth: ".grid-item",
-    gutter: 10,
-    percentPosition: true,
+    columnWidth: ".grid-sizer",
+    //gutter: 5,
+    //horizontalOrder: true,
+    //fitWidth: true,
   });
 });
 
-// Elements
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.getElementById("lightbox-img");
-
-// Lightbox image click handler
+// Lightbox functionality
 document.querySelectorAll(".grid-item img").forEach((img) => {
-  img.addEventListener("click", (e) => {
-    e.stopPropagation();
-
-    lightboxImg.src = img.src;
-    lightboxImg.classList.remove("active");
-    lightboxImg.style.display = "none";
-    lightbox.style.display = "block";
-
-    lightboxImg.onload = () => {
-      const imgWidth = lightboxImg.naturalWidth;
-      const imgHeight = lightboxImg.naturalHeight;
-
-      const scale = Math.min(
-        (window.innerWidth * 0.9) / imgWidth,
-        (window.innerHeight * 0.9) / imgHeight,
-        1
-      );
-
-      const scaledWidth = imgWidth * scale;
-      const scaledHeight = imgHeight * scale;
-
-      lightboxImg.style.width = `${scaledWidth}px`;
-      lightboxImg.style.height = `${scaledHeight}px`;
-      lightboxImg.style.left = `${e.clientX - scaledWidth / 2}px`;
-      lightboxImg.style.top = `${e.clientY - scaledHeight / 2}px`;
-
-      lightboxImg.style.display = "block";
-
-      // Animate
-      void lightboxImg.offsetWidth;
-      lightboxImg.classList.add("active");
-    };
+  img.addEventListener("click", () => {
+    basicLightbox
+      .create(
+        `<img src="${img.src}" style="max-width:100%; max-height:90vh;" />`
+      )
+      .show();
   });
-});
-
-// Close on click outside image
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    lightbox.style.display = "none";
-  }
-});
-
-// Close on Escape key
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    lightbox.style.display = "none";
-  }
 });
